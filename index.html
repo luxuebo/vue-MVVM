@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue MVVM</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model='message'>
+        {{message}} ---  {{age.a}}
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <script src="watcher.js"></script>
+    <script src="observer.js"></script>
+    <script src="compile.js"></script>
+    <script src="mvvm.js"></script>
+    <script>
+    var vm = new MVVM({
+        el:'#app',
+        data:{
+            message:'hello',
+            age:{
+                a:10
+            }
+        }
+    })
+    for(var key in vm){
+        console.log(key)
+    }
+    
+    </script>
+</body>
+</html>
