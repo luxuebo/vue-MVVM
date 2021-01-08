@@ -10,9 +10,6 @@
     <div id="app">
         <input type="text" v-model='message'>
         {{message}} ---  {{age.a}}
-        <ul>
-            <li></li>
-        </ul>
     </div>
     <script src="watcher.js"></script>
     <script src="observer.js"></script>
@@ -28,10 +25,6 @@
             }
         }
     })
-    for(var key in vm){
-        console.log(key)
-    }
-    
     </script>
 </body>
 </html>
